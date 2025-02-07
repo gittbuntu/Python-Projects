@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>Odoo</title>
+        <link type="image/x-icon" rel="shortcut icon" href="/web/static/img/favicon.ico"/>
+        <script id="web.layout.odooscript" type="text/javascript">
+            var odoo = {
+                csrf_token: "5dc31ac2d9db6f2617a70881401a6854bc75d5e5o1770370244",
+                debug: "",
+            };
+        </script>
+        
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+                <meta name="theme-color" content="#714B67"/>
+        <link rel="manifest" href="/web/manifest.webmanifest" crossorigin="use-credentials"/>
+                <link rel="apple-touch-icon" href="/web/static/img/odoo-icon-ios.png"/>
+                <script type="text/javascript">
+                    // Block to avoid leaking variables in the script scope
+                    {
+                        odoo.__session_info__ = {"uid": 2, "is_system": true, "is_admin": true, "is_public": false, "is_internal_user": true, "user_context": {"lang": "en_US", "tz": "Asia/Karachi", "uid": 2}, "db": "furor-production-16112500", "user_settings": {"id": 1, "user_id": {"id": 2}, "is_discuss_sidebar_category_channel_open": true, "is_discuss_sidebar_category_chat_open": true, "push_to_talk_key": false, "use_push_to_talk": false, "voice_active_duration": 0, "volume_settings_ids": [["ADD", []]], "homemenu_config": false, "livechat_username": "Furor IT Team", "livechat_lang_ids": [], "is_discuss_sidebar_category_livechat_open": false}, "server_version": "17.0+e", "server_version_info": [17, 0, 0, "final", 0, "e"], "support_url": "https://www.odoo.com/help", "name": "Administrator", "username": "admin", "partner_display_name": "Administrator", "partner_id": 3, "web.base.url": "https://furor.odoo.com", "active_ids_limit": 20000, "profile_session": null, "profile_collectors": null, "profile_params": null, "max_file_upload_size": 134217728, "home_action_id": false, "cache_hashes": {"translations": "7bc523048c37bbd5e2a9a1871df92ac19ca9fec0", "load_menus": "f7501cbc3be18b5f50b550f67f5f35e1dee04403d1f3c7b24483c1f28fd949b4"}, "currencies": {"131": {"symbol": "AED", "position": "after", "digits": [69, 2]}, "1": {"symbol": "\u20ac", "position": "after", "digits": [69, 2]}, "165": {"symbol": "Rs.", "position": "before", "digits": [69, 2]}, "2": {"symbol": "$", "position": "before", "digits": [69, 2]}}, "bundle_params": {"lang": "en_US"}, "user_companies": {"current_company": 1, "allowed_companies": {"5": {"id": 5, "name": "JFF ENTERPRISE LLC UAE", "sequence": 10, "child_ids": [], "parent_id": false}, "6": {"id": 6, "name": "JFF ENTERPRISE LLC USA", "sequence": 10, "child_ids": [], "parent_id": false}, "4": {"id": 4, "name": "JFF ENTERPRISE LLC USA(OLD)", "sequence": 10, "child_ids": [], "parent_id": false}, "1": {"id": 1, "name": "eden apparels (pvt) ltd", "sequence": 0, "child_ids": [], "parent_id": false}}, "disallowed_ancestor_companies": {}}, "show_effect": true, "display_switch_company_menu": true, "user_id": [2], "max_time_between_keys_in_ms": 100, "websocket_worker_version": "17.0-1", "web_tours": ["point_of_sale_tour", "mail_tour", "account_tour", "account_accountant_tour", "sale_tour", "web_studio_home_menu_background_tour", "web_studio_new_app_tour", "point_of_sale_tour", "point_of_sale_tour", "point_of_sale_tour"], "tour_disable": false, "notification_type": "inbox", "warning": "admin", "expiration_date": "2025-07-25 00:00:00", "expiration_reason": "renewal", "map_box_token": false, "odoobot_initialized": true, "iap_company_enrich": false, "is_quick_edit_mode_enabled": false, "dbuuid": "702cb7e0-6e2d-11ec-90d6-0242ac120003", "multi_lang": false};
+                        const { user_context,  cache_hashes } = odoo.__session_info__;
+                        const lang = new URLSearchParams(document.location.search).get("lang");
+                        let menuURL = `/web/webclient/load_menus/${cache_hashes.load_menus}`;
+                        if (lang) {
+                            user_context.lang = lang;
+                            menuURL += `?lang=${lang}`
+                        }
+                        odoo.reloadMenus = () => fetch(menuURL).then(res => res.json());
+                        odoo.loadMenusPromise = odoo.reloadMenus();
+                        // Prefetch translations to speedup webclient. This is done in JS because link rel="prefetch"
+                        // is not yet supported on safari.
+                        fetch(`/web/webclient/translations/${cache_hashes.translations}?lang=${user_context.lang}`);
+                    }
+                </script>
+                    <link type="text/css" rel="stylesheet" href="/web/assets/81c9a68/web.assets_web.min.css"/>
+        <script type="text/javascript" src="/web/assets/a111bc2/web.assets_web.min.js" onerror="__odooAssetError=1"></script>
+            
+    </head>
+    <body class="o_web_client">
+        
+        
+    </body>
+</html>
